@@ -10,7 +10,13 @@ class AkuApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    return const MaterialApp(home: Scaffold(body: Center(child: Text('Sedang Latihan Flutter!'))));
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Flutter Training')),
+          body: const Center(
+          child: Text('Sedang Latihan Flutter!')),
+      ),
+    );
   }
 } 
