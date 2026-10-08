@@ -51,6 +51,19 @@ class JadwalPentingWidget extends StatelessWidget {
             wordSpacing: 10,
           ),
         ),
+
+        SizedBox(height: 20),
+
+        Text(
+          'Line 1\nLine 2\nLine 3',
+          style: TextStyle(
+            fontSize: 20,
+            height: 2,
+          ),
+        ),
+
+        
+        
       ],
     );
   }
