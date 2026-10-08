@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 
 void main() {
+  //runApp(const MaterialApp(home: Scaffold(body: Center(child: Text('Hello World')))));
   runApp(const AkuApp());
 }
-
 class AkuApp extends StatelessWidget {
+  //cunstructor
   const AkuApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: JadwalPentingWidget(),
-        ),
+        appBar: AppBar(
+          title: const Text('Flutter Training')),
+          body: const Center(
+          child: Text('Sedang Latihan Flutter!')),
       ),
     );
   }
-}
+} 
 
 class JadwalPentingWidget extends StatelessWidget { 
   const JadwalPentingWidget({super.key});
@@ -28,27 +30,32 @@ class JadwalPentingWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Jadwal Penting Hari Ini',
+          'Jadwal Penting',
           style: TextStyle(
             fontSize: 20,
+            backgroundColor: Colors.yellow,       
+            decoration: TextDecoration.underline, 
           ),
         ),
-
         SizedBox(height: 15),
         Text(
-          'Tugas Kuliah dan Deadline',
+          'Tugas Selesai',
           style: TextStyle(
-            fontSize: 20,
-            letterSpacing: 5,
+            fontSize: 18,
+            decoration: TextDecoration.lineThrough, 
           ),
         ),
-
         SizedBox(height: 15),
         Text(
-          'Rahasia Perusahaan',
+          'Rahasia',
           style: TextStyle(
-            fontSize: 20,
-            wordSpacing: 10,
+            fontSize: 25,
+            shadows: [
+              Shadow(
+                offset: Offset(2, 2), 
+                blurRadius: 3,        
+              ),
+            ],
           ),
         ),
       ],
