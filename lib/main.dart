@@ -12,31 +12,48 @@ class AkuApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: CeritaHariIniWidget(),
+          child: InfoCuacaHari(),
         ),
       ),
     );
   }
 }
 
-class CeritaHariIniWidget extends StatelessWidget {
-  const CeritaHariIniWidget({super.key});
+class InfoCuacaHari extends StatelessWidget {
+  const InfoCuacaHari({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(border: Border.all()),
-      child: const Text(
-        'Tadi pagi saya bangun terlambat karena semalam mengerjakan '
-        'tugas kuliah sampai larut malam. Untungnya hari ini jalanan '
-        'tidak terlalu macet sehingga sampai tepat waktu.',
-        textAlign: TextAlign.justify,
-        maxLines: 2,
-        overflow: TextOverflow.ellipsis,
-        softWrap: true,
+    return  RichText(
+      text: TextSpan(
+        style: TextStyle(
+          fontSize: 20,
+          color: Colors.black,
+        ),
+        children: [
+          TextSpan(
+            text: 'Cuaca Hari ini sangat cerah, cocok untuk belajar ',
+          ),
+          TextSpan(
+            text: 'coding agar bisa menjadi ahli',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.blue,
+            ),
+          ),
+          TextSpan(
+            text: ' dan ',
+          ),
+          TextSpan(
+            text: 'mengatur database',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.green,
+            ),
+          ),
+        ],
       ),
     );
   }
 }
+
